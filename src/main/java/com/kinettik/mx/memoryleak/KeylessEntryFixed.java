@@ -3,10 +3,10 @@ package com.kinettik.mx.memoryleak;
 import java.util.HashMap;
 import java.util.Map;
 
-class Key {
+class GoodKey {
     Integer id;
 
-    Key(Integer id) {
+    GoodKey(Integer id) {
         this.id = id;
     }
 
@@ -18,8 +18,8 @@ class Key {
     @Override
     public boolean equals(Object o) {
         boolean response = false;
-        if (o instanceof Key) {
-            response = (((Key) o).id).equals(this.id);
+        if (o instanceof GoodKey) {
+            response = (((GoodKey) o).id).equals(this.id);
         }
         return response;
     }
@@ -27,11 +27,11 @@ class Key {
 
 public class KeylessEntryFixed {
     public static void main(String[] args) {
-        Map<Key, String> m = new HashMap<Key, String>();
+        Map<GoodKey, String> m = new HashMap<GoodKey, String>();
         while (true) {
             for (int i = 0; i < 10000; i++) {
-                if (!m.containsKey(new Key(i))) {
-                    m.put(new Key(i), "Number:" + i);
+                if (!m.containsKey(new GoodKey(i))) {
+                    m.put(new GoodKey(i), "Number:" + i);
                 }
             }
         }

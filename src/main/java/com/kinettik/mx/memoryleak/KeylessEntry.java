@@ -3,10 +3,10 @@ package com.kinettik.mx.memoryleak;
 import java.util.HashMap;
 import java.util.Map;
 
-class Key {
+class BadKey {
     Integer id;
 
-    Key(Integer id) {
+    BadKey(Integer id) {
         this.id = id;
     }
 
@@ -18,11 +18,11 @@ class Key {
 
 public class KeylessEntry {
     public static void main(String[] args) {
-        Map<Key, String> m = new HashMap<Key, String>();
+        Map<BadKey, String> m = new HashMap<BadKey, String>();
         while (true) {
             for (int i = 0; i < 10000; i++) {
-                if (!m.containsKey(new Key(i))) {
-                    m.put(new Key(i), "Number:" + i);
+                if (!m.containsKey(new BadKey(i))) {
+                    m.put(new BadKey(i), "Number:" + i);
                 }
             }
         }

@@ -1,25 +1,9 @@
-package com.kinettik.mx;
+package com.kinettik.mx.logging;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-class Person {
-    private final String name;
-
-    public Person(String n) {
-        name = n;
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see java.lang.Object#toString()
-     */
-    @Override
-    public String toString() {
-        return name;
-    }
-}
+import com.kinettik.mx.pojo.Person;
 
 public class LoggingExample {
     public static void main(String[] args) {
