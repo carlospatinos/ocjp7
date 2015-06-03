@@ -25,7 +25,7 @@ class GoodKey {
     }
 }
 
-public class KeylessEntryFixed {
+public class GoodKeyEntry {
     public static void main(String[] args) {
         Map<GoodKey, String> m = new HashMap<GoodKey, String>();
         while (true) {
