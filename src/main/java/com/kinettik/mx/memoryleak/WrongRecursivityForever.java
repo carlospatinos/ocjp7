@@ -1,4 +1,3 @@
-
 package com.kinettik.mx.memoryleak;
 
 public class WrongRecursivityForever {

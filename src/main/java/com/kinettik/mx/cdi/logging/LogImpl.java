@@ -12,7 +12,6 @@ import javax.interceptor.InvocationContext;
 @Interceptor
 @Log
 public class LogImpl {
-
     @AroundInvoke
     public Object logging(final InvocationContext context) throws Exception
     {

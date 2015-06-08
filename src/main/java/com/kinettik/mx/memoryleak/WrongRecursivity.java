@@ -12,7 +12,6 @@ public class WrongRecursivity {
         try {
             Thread.sleep(100);
         } catch (final InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         System.err.println(++depth);

@@ -1,7 +1,7 @@
 
 package com.kinettik.mx.performance.logging;
 
-public class NodeWithToString extends NodeNoToString {
+public class NodeWithToString extends NodeWithoutToString {
 
     public NodeWithToString(final String name, final String ip, final long childs) {
         super(name, ip, childs);

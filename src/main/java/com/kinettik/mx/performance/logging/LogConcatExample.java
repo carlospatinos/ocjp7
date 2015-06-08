@@ -13,7 +13,7 @@ public class LogConcatExample {
         long start = System.currentTimeMillis();
         while (true) {
             i++;
-            final NodeNoToString node = new NodeNoToString("Name", "Ip", i);
+            final NodeWithoutToString node = new NodeWithoutToString("Name", "Ip", i);
             log.debug("Object is : {}", node.getIp() + node.getChilds() + node.getName());
             if (i == 1000000000) {
                 try {
